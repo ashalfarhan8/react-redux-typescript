@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import { addNote } from "./actions";
+// import NewNote from "./components/NewNote";
+// import { NoteState } from "./store/notesReducer";
+// import { useDispatch, useSelector } from "react-redux";
+import "./App.css";
+import React from "react";
+import Header from "./components/Header";
+import Posts from "./components/Posts";
+import PostForm from "./components/PostForm";
 
 function App() {
+  // const notes = useSelector<NoteState, NoteState["notes"]>(
+  //   (state) => state.notes
+  // );
+  // const dispatch = useDispatch();
+  // const handleAddNote = (note: string) => {
+  //   dispatch(addNote(note));
+  // };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <PostForm />
+      <Posts />
+      {/* <NewNote addNote={handleAddNote} />
+      <hr />
+      <ul>
+        {notes.map((note, idx) => {
+          return <li key={idx}>{note}</li>;
+        })}
+      </ul> */}
     </div>
   );
 }
